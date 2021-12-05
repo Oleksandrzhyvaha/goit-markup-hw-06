@@ -53,14 +53,23 @@ img {
 .link {
   text-decoration: none;
 }
+.current::before {
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  background: #2196f3;
+  border-radius: 2px;
+  content: "";
+  bottom: -1px;
+}
 .list {
   list-style: none;
   padding: 0;
 }
 
 .header {
-  border-bottom: 1px solid var(--line-color);
   align-items: center;
+  border-bottom: 1px solid var(--line-color);
 }
 
 /*Логотип*/
@@ -96,6 +105,7 @@ img {
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: var(--primary-shade-color);
+  position: relative;
 
   transition-property: color;
   transition-duration: var(--duration);
@@ -196,7 +206,7 @@ img {
 .secondary-btn {
   cursor: pointer;
 
-  padding-left: 6px 22px;
+  padding: 6px 22px;
 
   font-family: inherit;
   font-weight: 500;
@@ -383,9 +393,6 @@ img {
 .filter-item:not(:last-child) {
   margin-right: 9px;
 }
-.secondary-btn {
-  padding: 8px 22px;
-}
 .portfolio-list {
   display: flex;
   align-items: center;
@@ -408,7 +415,7 @@ img {
   overflow: hidden;
 }
 .portfolio-card {
-  padding-top: 30px 30px;
+  padding-top: 30px;
 }
 .portfolio-item-title {
   margin: 0 0 4px 0;
@@ -439,19 +446,16 @@ img {
   overflow: hidden;
 }
 .portfolio-list-item {
-  width: 370px;
-
   background-color: var(--secondary-color);
   box-shadow: none;
-  border-radius: 0px 0px 4px 4px;
 
   transition-property: box-shadow;
   transition-duration: var(--duration);
   transition-timing-function: var(--function);
 }
-.portfolio-list-item:hover .overlay,
-.portfolio-list-item:focus .overlay,
-.portfolio-list-item:focus-within .overlay {
+.portfolio-list-item:hover .portfolio-card-overlay,
+.portfolio-list-item:focus .portfolio-card-overlay,
+.portfolio-list-item:focus-within .portfolio-card-overlay {
   transform: translateY(0);
   opacity: 1;
 }
@@ -551,18 +555,15 @@ img {
   background-color: var(--seconadary-shade-color);
 }
 /*Окошки*/
-.overlay {
+.portfolio-card-overlay {
   position: absolute;
   bottom: 0;
-
-  display: flexbox;
-  align-items: center;
+  padding: 63px 24px;
   width: 100%;
-  height: 294px;
-
+  height: 100%;
   background-color: var(--overlay-card-color);
 
-  transform: translateY(101%);
+  transform: translateY(100%);
   opacity: 0;
   transition-property: opacity, transform;
   transition-duration: var(--duration);
@@ -570,25 +571,24 @@ img {
 
   overflow-y: auto;
 }
-.overlay::-webkit-scrollbar {
+::-webkit-scrollbar {
   width: 10px;
 }
-.overlay::-webkit-scrollbar-track {
+::-webkit-scrollbar-track {
   box-shadow: inset 0 0 5px var(--primary-shade-color);
   border-radius: 10px;
 }
 
-.overlay::-webkit-scrollbar-thumb {
-  background: --;
+::-webkit-scrollbar-thumb {
+  background: var(--primary-shade-color);
   border-radius: 10px;
 }
 
-.overlay::-webkit-scrollbar-thumb:hover {
-  background: var(--primary-shade-color);
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-color);
 }
 .overlay-text {
   margin: 0;
-  padding: 63px 24px;
   color: var(--secondary-color);
   font-size: 18px;
   line-height: 1.56;
@@ -604,15 +604,16 @@ img {
   width: 100%;
 
   background-color: var(--overlay-color);
-
+  opacity: 1;
   visibility: visible;
-  transition-property: visibility;
+  transition-property: visibility, opacity;
   transition-duration: var(--duration);
   transition-timing-function: var(--function);
 }
 .backdrop.is-hidden {
   visibility: hidden;
   pointer-events: none;
+  opacity: 0;
 }
 .modal {
   position: absolute;
@@ -626,22 +627,16 @@ img {
   padding: 15px;
 
   background: var(--secondary-color);
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-    0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
-
-  opacity: 1;
-
   transition-property: opacity, transform;
   transition-duration: var(--duration);
   transition-timing-function: var(--function);
 }
 .modal.is-hidden {
-  opacity: 0;
-
   transform: translate(-50%, -50%) scale(0.5);
 }
 .modal-btn {
+  cursor: pointer;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -662,5 +657,8 @@ img {
 .close-icon {
   height: 18px;
   width: 18px;
-  fill: var(--primary-color);
+  fill: currentColor;
+}
+.modal-btn:hover {
+  color: var(--accent-color);
 }
