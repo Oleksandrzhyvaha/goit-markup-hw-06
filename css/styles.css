@@ -390,15 +390,82 @@ img {
   color: var(--secondary-color);
   background-color: var(--social-unactive-footer);
 }
-.footer-social > .text {
-  margin-bottom: 20px;
+.footer-social {
   color: var(--secondary-color);
   font-weight: 700;
   font-size: 14px;
   line-height: 16px;
   text-transform: uppercase;
 }
+.subscription {
+  margin-left: auto;
+}
+.social-title {
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--secondary-color);
+  margin-bottom: 20px;
+}
+.subscription-title {
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--secondary-color);
+  margin-bottom: 20px;
+}
+.subscription-form {
+  display: flex;
+}
+.subscription-input {
+  width: 358px;
+  min-height: 50px;
+  padding: 15px 16px;
+  margin-right: 12px;
+  outline: none;
+  color: var(--secondary-color);
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-sizing: border-box;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  transition-property: border;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.subscription-input:focus {
+  border: 1px solid var(--accent-color);
+}
+.subscription-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  padding: 10px 28px;
 
+  background-color: var(--accent-color);
+  box-shadow: 0px 4px 4px rgba(126, 50, 50, 0.15);
+  border-radius: 4px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.9;
+  letter-spacing: 0.06em;
+  color: var(--secondary-color);
+  transition-property: color, background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  border-width: 0;
+}
+.icon-send {
+  width: 24px;
+  height: 24px;
+  margin-left: 10px;
+  fill: var(--secondary-color);
+}
 /*Портфолио*/
 .filter-list {
   display: flex;
@@ -632,20 +699,18 @@ img {
 }
 .modal {
   position: absolute;
+  max-width: 528px;
+  padding: 40px;
   top: 50%;
   left: 50%;
-
   transform: translate(-50%, -50%) scale(1);
-
-  min-width: 528px;
-  min-height: 581px;
-  padding: 15px;
-
   background: var(--secondary-color);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   transition-property: transform;
-  transition-duration: var(--duration);
-  transition-timing-function: var(--function);
+  transition-duration: 400ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal.is-hidden {
   transform: translate(-50%, -50%) scale(0.5);
@@ -668,6 +733,10 @@ img {
 
   border-radius: 50%;
   border: 1px solid rgba(0, 0, 0, 0.1);
+
+  transition-property: transform;
+  transition-duration: 400ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .close-icon {
   height: 18px;
@@ -676,4 +745,160 @@ img {
 }
 .modal-btn:hover {
   color: var(--accent-color);
+}
+.modal-title {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.1;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--primary-shade-color);
+  text-align: center;
+  margin-bottom: 12px;
+}
+.form-field {
+  margin-bottom: 10px;
+}
+.modal-label {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+  color: var(--first-text-color);
+}
+.input-group {
+  position: relative;
+  margin-top: 4px;
+}
+.modal-input {
+  width: 100%;
+  padding: 12px 42px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  outline: none;
+  box-sizing: border-box;
+  border-radius: 4px;
+  transition-property: border;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-input:focus-within + .modal-input-icon {
+  fill: var(--accent-color);
+}
+.modal-input-icon {
+  display: inline-block;
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  left: 12px;
+  bottom: 12px;
+  fill: var(--primary-shade-color);
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal-textarea::placeholder {
+  font-size: 12px;
+  line-height: 1.2;
+  letter-spacing: 0.01em;
+  color: rgba(117, 117, 117, 0.5);
+}
+.modal-textarea-field {
+  margin-bottom: 20px;
+}
+.modal-textarea {
+  width: 100%;
+  padding: 16px 12px;
+  margin-top: 4px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  outline: none;
+  box-sizing: border-box;
+  border-radius: 4px;
+  resize: none;
+  transition-property: border;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal-input:focus,
+.modal-textarea:focus {
+  border: 1px solid var(--accent-color);
+}
+
+.modal-input:hover,
+.modal-textarea:hover {
+  cursor: pointer;
+}
+
+.modal-checkbox-field {
+  margin-bottom: 30px;
+}
+
+.modal-checkbox-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  line-height: 1.7;
+  letter-spacing: 0.03em;
+  color: var(--first-text-color);
+}
+
+.modal-checkbox {
+  position: absolute;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+.check-box {
+  display: block;
+  height: 16px;
+  width: 16px;
+  margin-right: 8px;
+  border: 2px solid var(--primary-shade-color);
+  border-radius: 2px;
+  cursor: pointer;
+  transition-property: border, background-color, background-image;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-checkbox:focus + .check-box {
+  border: 2px solid var(--accent-color);
+}
+
+.modal-checkbox:checked:focus + .check-box {
+  background-color: var(--accent-color);
+  background-image: url(../images/done.svg);
+  background-size: contain;
+  background-origin: border-box;
+  background-position: center;
+}
+
+.agreement {
+  margin-left: 5px;
+  text-decoration-line: underline;
+  text-decoration-skip-ink: none;
+  color: var(--accent-color);
+}
+
+.modal-button {
+  padding: 10px 56px;
+  display: block;
+  margin: 0 auto;
+
+  background-color: var(--accent-color);
+  box-shadow: 0px 4px 4px rgba(126, 50, 50, 0.15);
+  border-radius: 4px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.9;
+  letter-spacing: 0.06em;
+  color: var(--secondary-color);
+  transition-property: color, background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  border-width: 0;
 }
