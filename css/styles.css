@@ -186,6 +186,8 @@ img {
 
 /*Кнопки*/
 .primary-btn {
+  display: flex;
+  alling-items: center;
   cursor: pointer;
   padding: 10px 32px;
   font-weight: 700;
