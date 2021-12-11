@@ -187,7 +187,7 @@ img {
 /*Кнопки*/
 .primary-btn {
   display: flex;
-  alling-items: center;
+  align-items: center;
   cursor: pointer;
   padding: 10px 32px;
   font-weight: 700;
@@ -702,14 +702,13 @@ img {
   min-width: 30px;
 
   padding: 0;
-
   background-color: var(--secondary-color);
 
   border-radius: 50%;
   border: 1px solid rgba(0, 0, 0, 0.1);
 
-  transition-property: transform;
-  transition-duration: 400ms;
+  transition-property: color;
+  transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .close-icon {
@@ -737,11 +736,9 @@ img {
   display: flex;
   flex-direction: column;
   position: relative;
-  font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.01em;
   color: var(--first-text-color);
-  margin-bottom: 4px;
   width: 100%;
   padding: 12px 42px;
   border: 1px solid rgba(33, 33, 33, 0.2);
@@ -752,8 +749,17 @@ img {
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-
-.input:focus-within + .modal-input-icon {
+.label {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+  color: var(--first-text-color);
+  margin-bottom: 4px;
+}
+.input:focus-within + .input-icon {
   fill: var(--accent-color);
 }
 .input-icon {
@@ -791,12 +797,12 @@ img {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .input:focus,
-.modal-textarea:focus {
+.textarea:focus {
   border: 1px solid var(--accent-color);
 }
 
 .input:hover,
-.modal-textarea:hover {
+.mtextarea:hover {
   cursor: pointer;
 }
 
@@ -831,10 +837,10 @@ img {
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-.checkbox:focus + .check-box {
+.checkbox:focus + .check-box-appearance {
   border: 2px solid var(--accent-color);
 }
-.checkbox:checked:focus + .check-box {
+.checkbox:checked:focus + .check-box-appearance {
   background-color: var(--accent-color);
   background-image: url(../images/done.svg);
   background-size: contain;
@@ -849,4 +855,7 @@ img {
   text-decoration-line: underline;
   text-decoration-skip-ink: none;
   color: var(--accent-color);
+}
+.modal-button {
+  padding: 10px 56px;
 }
