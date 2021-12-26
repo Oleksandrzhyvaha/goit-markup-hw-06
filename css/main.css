@@ -945,7 +945,7 @@ img {
 
 .checkbox-field__input:checked:focus + .checkbox-field__icon {
   background-color: #2196f3;
-  background-image: url(../images/checkbox-on.svg);
+  background-image: url(../images/done.svg);
   background-size: contain;
   background-origin: border-box;
   background-position: center;
