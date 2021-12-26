@@ -1,0 +1,19 @@
+.logo {
+  font-family: Raleway;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.2;
+  letter-spacing: 0.03em;
+}
+
+.logo__brand-color {
+  color: $main-brand-color;
+}
+
+.logo--primary-color {
+  color: $logo-secondary-color;
+}
+
+.logo--secondary-color {
+  color: $secondary-page-color;
+}
