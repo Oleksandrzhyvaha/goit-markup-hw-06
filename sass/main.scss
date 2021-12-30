@@ -5,7 +5,7 @@
 @import "./components/adress";
 @import "./components/header";
 @import "./components/logo";
-@import "./components/nav";
+@import "./components/navigation";
 @import "./components/contacts";
 @import "./components/hero";
 @import "./components/features";
@@ -20,8 +20,8 @@
 @import "./components/input-field";
 @import "./components/textarea-field";
 @import "./components/checkbox-field";
-@import "./utils/reset.scss";
-@import "./utils/visually-hidden.scss";
+@import "./utils/reset";
+@import "./utils/visually-hidden";
 @import "./utils/placeholders";
 @import "./utils/variables";
 @import "./utils/mixins";

@@ -2,10 +2,6 @@
   padding-bottom: 47px;
 }
 
-.features-list {
-  display: flex;
-}
-
 .features-list__item {
   width: 270px;
   display: inline-block;
@@ -14,7 +10,7 @@
 .features-list__icon-field {
   display: flex;
   padding: 25px 0;
-  background-color: $secondary-background-color;
+  background-color: $btn-background-color;
   justify-content: center;
   margin-bottom: 30px;
   border-radius: 4px;
@@ -22,6 +18,10 @@
 
 .features-list__item:not(:last-child) {
   margin-right: 30px;
+}
+
+.features-list {
+  display: flex;
 }
 
 .features-list__item-title {
@@ -37,5 +37,5 @@
   font-size: 14px;
   line-height: 24px;
   letter-spacing: 0.03em;
-  color: $third-text-color;
+  color: $first-text-color;
 }

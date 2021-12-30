@@ -1,41 +1,41 @@
-.nav {
-  margin-left: 93px;
-}
-
-.nav__list {
+.navigation__list {
   display: flex;
 }
 
-.nav__item:not(:last-child) {
+.navigation {
+  margin-left: 93px;
+}
+
+.navigation__item:not(:last-child) {
   margin-right: 50px;
 }
 
-.nav__link {
+.navigation__link {
   display: block;
   padding: 32px 0;
-  font-weight: 500;
-  font-size: 14px;
   line-height: 1.1;
+  font-size: 14px;
+  font-weight: 500;
   letter-spacing: 0.02em;
-  color: var(--main-text-color);
+  color: var(--primary-shade-color);
   transition-property: color;
   @include main-animation();
   &:hover,
   &:focus {
-    color: $main-brand-color;
+    color: $accent-color;
   }
 }
 
-.nav__link--current {
+.navigation__link--current {
   position: relative;
-  color: $main-brand-color;
+  color: $accent-color;
   &::after {
     content: "";
     position: absolute;
     @include size(100%, 4px);
     left: 0;
     bottom: -1px;
-    background-color: $main-brand-color;
+    background-color: $accent-color;
     border-radius: 2px;
   }
 }

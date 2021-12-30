@@ -11,22 +11,22 @@
   display: inline-flex;
   align-items: center;
   font-weight: 500;
-  font-size: 14px;
   line-height: 1.1;
   letter-spacing: 0.02em;
-  color: $third-text-color;
+  font-size: 14px;
+  color: $first-text-color;
   transition-property: color;
   @include main-animation();
   &:hover,
   &:focus {
-    color: $main-brand-color;
+    color: $accent-color;
   }
 }
 
 .contacts-list__link--secondary {
   display: block;
   letter-spacing: 0.03em;
-  color: rgba($secondary-page-color, 0.6);
+  color: rgba($secondary-color, 0.6);
   line-height: 1.7;
 }
 

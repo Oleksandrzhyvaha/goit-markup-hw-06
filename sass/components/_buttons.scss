@@ -3,14 +3,14 @@
   margin: 0 auto;
   min-width: 200px;
   padding: 10px 0;
-  background-color: $main-brand-color;
+  background-color: $accent-color;
   box-shadow: 0px 4px 4px rgba(126, 50, 50, 0.15);
   font-size: 16px;
   line-height: 1.9;
   letter-spacing: 0.06em;
   border-radius: 4px;
   font-weight: 700;
-  color: $secondary-page-color;
+  color: $secondary-color;
   transition-property: color, background-color;
   @include main-animation();
   &:hover,
@@ -25,18 +25,26 @@
 
 .primary-button__icon {
   margin-left: 10px;
-  fill: $secondary-page-color;
+  fill: $secondary-color;
+}
+
+.close-button__icon {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  width: 18px;
+  height: 18px;
 }
 
 .secondary-button {
   padding: 6px 22px;
-  background-color: $secondary-background-color;
+  background-color: $btn-background-color;
   border: none;
   border-radius: 4px;
   line-height: 1.6;
-  text-align: center;
   letter-spacing: 0.03em;
   font-family: inherit;
+  text-align: center;
   font-weight: 500;
   font-size: 16px;
   transition-property: color, box-shadow, background-color;
@@ -44,7 +52,7 @@
   &:hover,
   &:focus {
     background: $main-brand-color;
-    color: $secondary-page-color;
+    color: $secondary-color;
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
       0px 2px 2px rgba(0, 0, 0, 0.12);
   }
@@ -53,7 +61,7 @@
 .close-button {
   position: absolute;
   @include size(30px, 30px);
-  background: $secondary-page-color;
+  background: $secondary-color;
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
   right: 8px;
@@ -65,12 +73,4 @@
   &:hover {
     fill: currentColor;
   }
-}
-
-.close-button__icon {
-  position: absolute;
-  top: 5px;
-  right: 5px;
-  width: 18px;
-  height: 18px;
 }

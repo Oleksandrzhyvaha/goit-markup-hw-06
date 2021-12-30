@@ -16,10 +16,10 @@
   transition-property: border;
   @include main-animation();
   &:focus-within + .input-field__icon {
-    fill: $main-brand-color;
+    fill: $accent-color;
   }
   &:focus {
-    border: 1px solid $main-brand-color;
+    border: 1px solid $accent-color;
   }
   &:hover {
     cursor: pointer;
@@ -32,7 +32,7 @@
   @include size(18px, 18px);
   left: 12px;
   bottom: 12px;
-  fill: $main-text-color;
+  fill: $primary-shade-color;
   transition-property: fill;
   @include main-animation();
 }

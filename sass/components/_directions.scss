@@ -14,14 +14,6 @@
   margin-right: 30px;
 }
 
-.directions-list__explain {
-  position: absolute;
-  bottom: 0;
-  background-color: rgba(47, 48, 58, 0.8);
-  width: 100%;
-  padding: 27px 0;
-}
-
 .directions-list__explain-text {
   font-weight: bold;
   font-size: 14px;
@@ -29,5 +21,13 @@
   text-align: center;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  color: $secondary-page-color;
+  color: $secondary-color;
+}
+
+.directions-list__explain {
+  position: absolute;
+  bottom: 0;
+  background-color: rgba(47, 48, 58, 0.8);
+  width: 100%;
+  padding: 27px 0;
 }

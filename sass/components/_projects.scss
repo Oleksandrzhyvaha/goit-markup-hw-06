@@ -44,14 +44,14 @@
   font-size: 18px;
   line-height: 1.55;
   letter-spacing: 0.03em;
-  color: $secondary-page-color;
+  color: $secondary-color;
 }
 
 .projects-list__description-field {
   padding: 20px 24px;
-  border-left: 1px solid $primary-border-color;
-  border-right: 1px solid $primary-border-color;
-  border-bottom: 1px solid $primary-border-color;
+  border-right: 1px solid $border-color;
+  border-bottom: 1px solid $border-color;
+  border-left: 1px solid $border-color;
 }
 
 .projects-list__image {
@@ -61,14 +61,14 @@
 .projects-list__title {
   font-weight: 700;
   font-size: 18px;
-  line-height: 2;
   letter-spacing: 0.06em;
   margin-bottom: 4px;
+  line-height: 2;
 }
 
 .projects-list__description {
   font-size: 16px;
   line-height: 1.9;
   letter-spacing: 0.03em;
-  color: $third-text-color;
+  color: $first-text-color;
 }

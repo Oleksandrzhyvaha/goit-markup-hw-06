@@ -6,14 +6,14 @@
   letter-spacing: 0.03em;
 }
 
-.logo__brand-color {
-  color: $main-brand-color;
+.logo--primary-color {
+  color: $primary-color;
 }
 
-.logo--primary-color {
-  color: $logo-secondary-color;
+.logo__accent-color {
+  color: $accent-color;
 }
 
 .logo--secondary-color {
-  color: $secondary-page-color;
+  color: $secondary-color;
 }

@@ -3,7 +3,7 @@
   top: 0;
   left: 0;
   position: fixed;
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: $overlay-color;
   opacity: 1;
   transition-property: opacity visibility;
   @include main-animation();

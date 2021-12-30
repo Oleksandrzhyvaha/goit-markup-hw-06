@@ -1,6 +1,6 @@
 body {
   font-family: Roboto, sans-serif;
-  color: $main-text-color;
+  color: $primary-shade-color;
   margin: 0;
 }
 
@@ -68,7 +68,7 @@ p {
   flex-direction: column;
   line-height: 1.17;
   letter-spacing: 0.01em;
-  color: $third-text-color;
+  color: $first-text-color;
 }
 
 button {

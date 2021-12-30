@@ -9,15 +9,15 @@
 .clients-list__link {
   @extend %flex-center;
   @include size(170px, 92px);
-  border: 1px solid $secondary-brand-color;
+  border: 1px solid $secondary-accent-color;
   border-radius: 4px;
   color: $secondary-brand-color;
   transition-property: color, border;
   @include main-animation();
   &:hover,
   &:focus {
-    border: 1px solid $main-brand-color;
-    color: $main-brand-color;
+    border: 1px solid $accent-color;
+    color: $accent-color;
   }
 }
 

@@ -1,7 +1,3 @@
-.social-list {
-  display: flex;
-}
-
 .social-list__item {
   @include size(44px, 44px);
   &:not(:last-child) {
@@ -9,24 +5,28 @@
   }
 }
 
+.social-list {
+  display: flex;
+}
+
 .social-list__link {
   @extend %flex-center;
   @include size(100%, 100%);
   border-radius: 50%;
-  color: $secondary-brand-color;
-  background-color: $secondary-page-color;
+  color: $secondary-accent-color;
+  background-color: $secondary-color;
   transition-property: color, background-color;
   @include main-animation();
   &:hover,
   &:focus {
-    background-color: $main-brand-color;
-    color: $secondary-page-color;
+    background-color: $accent-color;
+    color: $secondary-color;
   }
 }
 
 .social-list__link--background {
-  color: $secondary-page-color;
-  background-color: rgba($secondary-page-color, 0.1);
+  color: $secondary-color;
+  background-color: rgba($secondary-color, 0.1);
 }
 
 .social-list__icon {

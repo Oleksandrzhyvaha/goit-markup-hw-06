@@ -5,18 +5,18 @@
 .subscribe-form__input {
   width: 358px;
   min-height: 50px;
-  outline: none;
-  color: $secondary-page-color;
+  color: $secondary-color;
   background-color: transparent;
   padding: 15px 16px;
   margin-right: 12px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   box-sizing: border-box;
+  outline: none;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
   transition-property: border;
   @include main-animation();
   &:focus {
-    border: 1px solid $main-brand-color;
+    border: 1px solid $accent-color;
   }
 }
