@@ -4,8 +4,8 @@ body {
   margin: 0;
 }
 
-button {
-  border-width: 0;
+.link {
+  text-decoration: none;
 }
 
 h1,
@@ -17,30 +17,16 @@ h6 {
   margin: 0;
 }
 
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-
-p {
-  margin: 0;
-}
-
 img {
   display: block;
-  max-width: 100%;
   height: auto;
+  max-width: 100%;
 }
 
 .container {
-  width: 1200px;
   margin: 0 auto;
   padding: 0 15px;
-}
-
-.link {
-  text-decoration: none;
+  width: 1200px;
 }
 
 .btn {
@@ -55,34 +41,36 @@ img {
   padding: 94px 0;
 }
 
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  margin: 0;
+}
+
 .main-title {
-  margin-bottom: 50px;
-  font-weight: 700;
   font-size: 36px;
   line-height: 1.16;
   letter-spacing: 0.03em;
+  margin-bottom: 50px;
+  font-weight: 700;
   text-align: center;
 }
 
 .label {
-  display: flex;
-  flex-direction: column;
   position: relative;
   margin-bottom: 4px;
   font-size: 12px;
+  display: flex;
+  flex-direction: column;
   line-height: 1.17;
   letter-spacing: 0.01em;
   color: $third-text-color;
 }
 
-.visually-hidden {
-  position: absolute;
-  @include size(1px, 1px);
-  margin: -1px;
-  padding: 0;
-  border: 0;
-  white-space: nowrap;
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
+button {
+  border-width: 0;
 }

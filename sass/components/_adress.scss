@@ -1,13 +1,9 @@
-.address {
-  margin-top: 20px;
-}
-
 .address__item {
   margin-bottom: 9px;
 }
 
-.address__item:last-child {
-  margin-bottom: 0;
+.address {
+  margin-top: 20px;
 }
 
 .address__link {
@@ -16,4 +12,8 @@
   line-height: 1.7;
   letter-spacing: 0.03em;
   color: $secondary-page-color;
+}
+
+.address__item:last-child {
+  margin-bottom: 0;
 }
