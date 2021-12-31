@@ -11,7 +11,7 @@
   @include size(170px, 92px);
   border: 1px solid $secondary-accent-color;
   border-radius: 4px;
-  color: $secondary-brand-color;
+  color: $secondary-accent-color;
   transition-property: color, border;
   @include main-animation();
   &:hover,

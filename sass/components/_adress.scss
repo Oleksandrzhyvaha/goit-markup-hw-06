@@ -9,9 +9,9 @@
 .address__link {
   display: block;
   line-height: 1.7;
+  color: $secondary-color;
   letter-spacing: 0.03em;
   font-size: 14px;
-  color: $secondary-color;
 }
 
 .address__item:last-child {
